@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Perfil{% endblock %}
+{% block content %}
+<div class="perfil">
+<h1>{{ user.first_name|default:user.username }} {{ user.last_name }}</h1>
+    <p>E-mail: {{ user.email }}</p>
+   
+    <a href="{% url 'editar_perfil' %}" class="btn">Editar Perfil</a>
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btnv">Logout</button>
+    </form>
+</div>
+{% endblock %}
