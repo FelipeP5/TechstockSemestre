@@ -12,6 +12,7 @@
         
         <div class="esquerda">
         <a href="{% url 'homepage' %}"><img class="logo" src="{% static 'img/logo.jpg' %}" alt="Logo"></a>
+        <a href="{% url 'homepage' %}" class="btn" id="home">Início</a>
         <a href="{% url 'produto_list' %}" class="btn">Produto</a>
         <a href="{% url 'categoria_list' %}" class="btn">Categoria</a>
         <a href="{% url 'movimentacao_list' %}" class="btn">Movimentação</a>
@@ -22,7 +23,7 @@
 
         <form action="{% url 'logout' %}" method="post" style="display: inline;">
             {% csrf_token %}
-            <button type="submit" class="btn" style="background: none; border: none; color: white; cursor: pointer; font-size: 1.3rem;"> Sair </button>
+            <button type="submit" class="btnv" style="; font-size: 1.3rem;"> Sair </button>
         </form>
         </div>
         
@@ -31,7 +32,6 @@
     {% block content %} {% endblock %}
     </div>
     <footer>
-
     </footer>
 </body>
 </html>

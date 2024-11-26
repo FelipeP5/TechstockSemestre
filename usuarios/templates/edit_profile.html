@@ -9,10 +9,10 @@
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Salvar Alterações</button>
+    <button type="submit" class="btn">Salvar Alterações</button>
 </form>
 
-<a href="{% url 'produto_list' %}">Voltar para a página inicial</a>
+<a href="{% url 'perfil' %}" class="btn">Voltar</a>
 {% endblock %}
 
 

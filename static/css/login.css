@@ -72,3 +72,13 @@ input[type= "text"], [type= "password"]{
     border: 2px solid rgb(211, 211, 211);
     border-radius: 5px;
 }
+@media screen and (max-width: 1100px){
+    .lateral{
+        display: none;
+    }
+    body{
+        grid-template-areas: "h h"
+                             "c c"
+                             "f f";
+    }
+}

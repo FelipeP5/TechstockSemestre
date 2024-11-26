@@ -2,10 +2,11 @@
 {% block title %}Bem-Vindo!{% endblock %}
 {% block content %}
 
-<div class="table-container">
+<div class="table-cotainer">
     <h1>Bem-vindo, {{ user.first_name|default:user.username }} {{ user.last_name }}!</h1>
 
     <h2>Últimos 10 Produtos e Saldo de Estoque</h2>
+    </div>
 <table>
     <tr>
         <th>Produto</th>

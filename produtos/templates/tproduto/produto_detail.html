@@ -12,6 +12,7 @@
     <li>Categoria: {{ object.categoria.nome}}</li>
 </ul>
     <img src="{{ produto.imagem.url }}" alt="{{ object.nome }}">
-<a href="{% url 'produto_list' %}">Voltar</a>
+<a href="{% url 'produto_list' %}" class="btn">Voltar</a>
+<br>
 {% endblock %}
 

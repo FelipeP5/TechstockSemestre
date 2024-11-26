@@ -11,7 +11,7 @@
             <tr>
                 <th>Nome</th>
                 <th>Preço</th>
-                <th>Quantidade</th>
+                <th class="qtde">Quantidade</th>
                 <th>Categoria</th>
                 <th>Ações</th>
             </tr>
@@ -21,10 +21,10 @@
             <tr>
                 <td>{{ produto.nome }}</td>
                 <td>R$ {{ produto.valor }}</td>
-                <td>{{ produto.quantidade }}</td>
+                <td class="qtde">{{ produto.quantidade }}</td>
                 <td>{{ produto.categoria.nome }}</td>
-                <td>
-                    <a href="{% url 'produto_detail' produto.pk %}" class="btnb">Detalhes</a>
+                <td class="colunabtn">
+                    <a href="{% url 'produto_detail' produto.pk %}" class="btnb">Mais</a>
                     <a href="{% url 'produto_update' produto.pk %}" class="btn">Editar</a>
                     <a href="{% url 'produto_delete' produto.pk %}" class="btnv">Excluir</a>
                 </td>
@@ -37,7 +37,7 @@
         </tbody>
     </table>
 
-    <a href="{% url 'produto_form' %}">Novo Produto</a>
+    <a href="{% url 'produto_form' %}" class="btn">Novo Produto</a>
     <br>
-    <a href="{% url 'categoria_form' %}">Cadastrar Categoria</a>
+    <a href="{% url 'categoria_form' %}" class="btn">Cadastrar Categoria</a>
 {% endblock %}

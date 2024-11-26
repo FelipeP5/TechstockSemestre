@@ -32,6 +32,7 @@ header, footer{
     align-items: center;
 }
 
+
 table, thead, tbody{
     width: 80%;
 }
@@ -41,23 +42,23 @@ tr, li{
     min-height: 6vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    border-bottom: 2px solid rgba(0,0,0);
+    justify-content: space-evenly;
+    border-bottom: 2px solid black;
 }
 
 th, td{
-    width: 15vw;
+    min-width: 15vw;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
 .btn{
+    cursor: pointer;
     border: none;
     text-decoration: none;
     color: rgb(0, 0, 0);
-    background-color: rgba(211, 211, 211, 0.7);
-    font-weight: 400;
+    background-color: rgba(211, 211, 211, 0.7);    
     padding: 2px;
     margin: 2px;
 }
@@ -69,6 +70,8 @@ th, td{
 }
 
 .btnv{
+    border: none;
+    cursor: pointer;
     text-decoration: none;
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.7);
@@ -108,6 +111,7 @@ form{
     align-items: center;
     gap: 2.5vh;
 }
+
 form>p{
     width: 100%;
     display:flex;
@@ -121,7 +125,7 @@ form>p{
     flex-direction: column;
     gap: 2vh;
     justify-content: space-around;
-    padding: 2vh;
+    padding: 5vh;
     background-color: rgb(211, 211, 211);
     border: 5px solid rgb(80, 80, 80);
     border-radius: 10px;
@@ -129,3 +133,43 @@ form>p{
 
 .logo{width: 20vw; height: 10vh}
 
+#home{
+    display: none;
+    background-color: rgba(222, 222, 222, 0.7);
+    padding: 10px;
+}
+#home:hover{
+    background-color: rgba(180, 180, 180, 1);
+    color: black;
+}
+
+@media screen and (max-width: 1100px){
+    .logo{
+        display: none;
+    }
+    .qtde{
+        display: none;
+    }
+    .table-cotainer>h2{
+        display: none;
+    }
+    #home{
+        display: flex;
+    }
+    .colunabtn{
+        display: flex;
+        flex-direction: column;
+    }
+    header{
+        flex-direction: column;
+        height: 30vh;
+        gap: 1vh;
+    }
+    .esquerda{
+        flex-direction: column;
+    }
+    th, td{
+        min-width: 8vw;
+        overflow: hidden;
+    }
+}
