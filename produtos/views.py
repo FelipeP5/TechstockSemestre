@@ -4,50 +4,59 @@ from produtos.models import Categoria, Produto
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-class CategoriaListView(ListView, LoginRequiredMixin):
+class CategoriaListView(LoginRequiredMixin, ListView):
     model = Categoria
     template_name = 'tcategoria/categoria_list.html'
+    login_url = "login"
 
-class CategoriaCreateView(CreateView, LoginRequiredMixin):
+class CategoriaCreateView(LoginRequiredMixin, CreateView):
     model = Categoria
     form_class = CategoriaForm
     template_name = 'tcategoria/categoria_form.html'
     success_url = reverse_lazy('categoria_list')
+    login_url = "login"
 
-class CategoriaUpdateView(UpdateView, LoginRequiredMixin):
+class CategoriaUpdateView(LoginRequiredMixin, UpdateView):
     model = Categoria
     form_class = CategoriaForm
     template_name = 'tcategoria/categoria_form.html'
     success_url = reverse_lazy('categoria_list')
+    login_url = "login"
 
-class CategoriaDeleteView(DeleteView, LoginRequiredMixin):
+class CategoriaDeleteView(LoginRequiredMixin, DeleteView):
     model = Categoria
     template_name = 'tcategoria/categoria_confirmar_exclusao.html'
     success_url = reverse_lazy('categoria_list')
+    login_url = "login"
 
 ####
 
-class ProdutoListView(ListView, LoginRequiredMixin):
+class ProdutoListView(LoginRequiredMixin, ListView):
     model = Produto
     template_name = 'tproduto/produto_list.html'
+    login_url = "login"
 
-class ProdutoDetailView(DetailView, LoginRequiredMixin):
+class ProdutoDetailView(LoginRequiredMixin, DetailView):
     model = Produto
     template_name = 'tproduto/produto_detail.html'
+    login_url = "login"
 
-class ProdutoCreateView(CreateView, LoginRequiredMixin):
+class ProdutoCreateView(LoginRequiredMixin, CreateView):
     model = Produto
     form_class = ProdutoForm
     template_name = 'tproduto/produto_form.html'
     success_url = reverse_lazy('produto_list')
+    login_url = "login"
 
-class ProdutoUpdateView(UpdateView, LoginRequiredMixin):
+class ProdutoUpdateView(LoginRequiredMixin, UpdateView):
     model = Produto
     form_class = ProdutoForm
     template_name = 'tproduto/produto_form.html'
     success_url = reverse_lazy('produto_list')
+    login_url = "login"
 
-class ProdutoDeleteView(DeleteView, LoginRequiredMixin):
+class ProdutoDeleteView(LoginRequiredMixin, DeleteView):
     model = Produto
     template_name = 'tproduto/produto_confirmar_exclusao.html'
     success_url = reverse_lazy('produto_list')
+    login_url = "login"

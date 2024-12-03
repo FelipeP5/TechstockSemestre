@@ -21,3 +21,4 @@ class ProdutoSaldoView(LoginRequiredMixin, TemplateView):
 
         context['produtos'] = produtos
         return context
+    login_url = "login"

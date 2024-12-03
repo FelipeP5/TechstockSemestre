@@ -11,7 +11,10 @@
     <li>Quantidade: {{ object.quantidade}}</li>
     <li>Categoria: {{ object.categoria.nome}}</li>
 </ul>
+    {% if produto.imagem %}
     <img src="{{ produto.imagem.url }}" alt="{{ object.nome }}">
+    {% endif %}
+    
 <a href="{% url 'produto_list' %}" class="btn">Voltar</a>
 <br>
 {% endblock %}
